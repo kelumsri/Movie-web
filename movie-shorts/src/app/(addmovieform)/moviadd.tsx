@@ -6,6 +6,7 @@ import { FormControl, FormLabel, FormErrorMessage, FormHelperText, Button, Input
 import Image from "../(componants)/(addform)/uploadimage"
 
 export default function FormikExample() {
+
   return (
     <Formik
       initialValues={{}}
