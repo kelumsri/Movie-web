@@ -19,6 +19,10 @@ model User {
 model Film {
   id        Int     @id @default(autoincrement())
   name      String
+  category  String
+  director  String
+  Castmember  String
+  image     String
   summary   String
   date      DateTime @default(now())
 }

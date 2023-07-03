@@ -50,9 +50,9 @@ async function main(){
 
 export const POST = async (req: Request, res: NextResponse) =>{
     try{
-        const{name,summary}=await req.json();
+        const{name,summary,category,director,Castmember,image}=await req.json();
         await main();
-        const Film = await prismadb.film.create({data: {name,summary}});
+        const Film = await prismadb.film.create({data: {name,category,director,Castmember,image,summary,}});
         return NextResponse.json({message:"success", Film}, {status:500});
     }finally{
         await prisma.$disconnect();
