@@ -82,7 +82,7 @@ export default function DropzoneButton() {
             <Dropzone.Idle>Upload resume</Dropzone.Idle>
           </Text>
           <Text ta="center" fz="sm" mt="xs" c="dimmed">
-            Drag'n'drop files here to upload. We can accept only <i>.pdf</i> or image files that
+            Drag & drop files here to upload. We can accept only <i>.pdf</i> or image files that
             are less than 30mb in size.
           </Text>
         </div>

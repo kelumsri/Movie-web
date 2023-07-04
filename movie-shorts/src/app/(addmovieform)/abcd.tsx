@@ -4,7 +4,7 @@ import {Fragment, useRef} from 'react'
 import {Toaster} from "react-hot-toast"
 
 
-export default function addfilm() {
+export default function Addfilm() {
 
     const nameRef = useRef<HTMLInputElement | null>(null);
     const summaryRef = useRef<HTMLTextAreaElement | null>(null);

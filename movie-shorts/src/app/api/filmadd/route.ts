@@ -40,11 +40,25 @@
 import { NextResponse } from "next/server";
 import prismadb from "../../../../lib/prismadb";
 
-async function main(){
+export async function main(){
      try{
+        console.log("connected");
+        
         await prisma.$connect();
-    }catch (err) {
+    }catch (err) { 
         return Error("Databace connection Unsuccessfull");
+    }
+};
+
+export const GET = async (req:Request, res:NextResponse) =>{
+    try{
+        await main ();
+        const Film = await prisma.film.findMany();
+        return NextResponse.json({message:"Success", Film}, {status: 200});
+    }catch (err){
+        return NextResponse.json({message: "Error", err},{status:500});
+    }finally {
+        await prisma.$disconnect();
     }
 }
 
@@ -58,3 +72,13 @@ export const POST = async (req: Request, res: NextResponse) =>{
         await prisma.$disconnect();
     }
 };
+
+// export const GET = async (req, res) => {
+//     try {
+//       await main();
+//       const films = await prismadb.film.findMany();
+//       return NextResponse.json({ message: "success", films }, { status: 200 });
+//     } finally {
+//       await prismadb.$disconnect();
+//     }
+//   };
