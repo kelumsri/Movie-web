@@ -150,7 +150,7 @@ const AddFilm = () => {
                   >
                     <input {...getInputProps()} />
                     {previewImage ? (
-                      <img src={previewImage} alt="Uploaded" style={{ width: '250px', height: '345px' }} />
+                      <Image src={previewImage} alt="Uploaded" style={{ width: '250px', height: '345px' }} />
                     ) : (
                       'Drop image here or click to browse'
                     )}
