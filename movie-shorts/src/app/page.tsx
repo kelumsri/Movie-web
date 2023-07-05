@@ -24,10 +24,12 @@ import Landing from "./(componants)/landing"
 
 export default function Home() {
   return (
-    <><div>
+    <>
+    <div>
       {/* <Navbar />     */}
     </div>
     <div><Landing/></div>
+
       </>
   )
 }

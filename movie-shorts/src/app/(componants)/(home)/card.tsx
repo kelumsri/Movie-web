@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
+import { UserButton } from "@clerk/nextjs"; 
 import {
   Box,
   Heading,
@@ -85,12 +86,16 @@ const movieclick=(id:number) =>{
   router.push(`/${id}`)
 }
 
+
+
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container className='mt-0' maxW={'7xl'} p="12">
       <Heading as="h1">MOVIE-SHORTS</Heading>
       
       <Heading as="h2" marginTop="5">
-        Your Favourite Movie Her
+        <div>
+        Your Favourite Movie Here
+        </div>
       </Heading>
 
       <Divider marginTop="5" />
@@ -117,7 +122,6 @@ const movieclick=(id:number) =>{
                  </Link>
                </Box>
               
-               <BlogTags tags={['Engineering', 'Product']} marginTop="3" />
                <Heading fontSize="xl" marginTop="2">
                  <Link  textDecoration="none" _hover={{ textDecoration: 'none' }}>
                    {film.name}

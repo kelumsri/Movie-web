@@ -110,9 +110,9 @@ const AddFilm = () => {
   return (
     <Fragment>
       <Toaster />
-      <div className="w-full m-auto flex my-4">
+      <div className="w-full m-auto flex my-4 text-black">
         <div className="flex flex-col justify-center items-center m-auto">
-          <p className="text-2xl text-fuchsia-600 font-bold p-3">Add New movies</p>
+          <p className="text-2xl text-yellow-600 font-bold p-3">Add New movies</p>
           <form onSubmit={handleSubmit}>
             <input
               ref={nameRef}
@@ -121,7 +121,7 @@ const AddFilm = () => {
               className="rounded-md px-4 py-2 my-2 w-full"
             />
 
-            <select ref={categoryRef} className="rounded-md px-4 py-2 my-2 w-full">
+            <select ref={categoryRef} className="rounded-md px-4 py-2 my-2 w-full text-black">
               <option>---Select Film Category---</option>
               <option value="Action">Action</option>
               <option value="Romance">Romance</option>
@@ -131,14 +131,14 @@ const AddFilm = () => {
               ref={directorRef}
               placeholder="Director name"
               type="text"
-              className="rounded-md px-4 py-2 my-2 w-full"
+              className="rounded-md px-4 py-2 my-2 w-full text-black"
             />
 
             <input
               ref={CastmemberRef}
               placeholder="Cast Member"
               type="text"
-              className="rounded-md px-4 py-2 my-2 w-full"
+              className="rounded-md px-4 py-2 my-2 w-full text-black"
             />
 
             <div className="w-full my-4">
@@ -146,11 +146,11 @@ const AddFilm = () => {
                 {({ getRootProps, getInputProps }) => (
                   <div
                     {...getRootProps()}
-                    className="rounded-md px-4 py-2 my-2 w-full border-dashed border-2 border-gray-300 flex justify-center items-center cursor-pointer"
+                    className="rounded-md px-4 py-2 my-2 w-full border-dashed border-2 border-gray-300 flex justify-center items-center cursor-pointer text-red-600"
                   >
                     <input {...getInputProps()} />
                     {previewImage ? (
-                      <img src={previewImage} alt="Uploaded" style={{ width: '300px', height: '200px' }} />
+                      <img src={previewImage} alt="Uploaded" style={{ width: '250px', height: '345px' }} />
                     ) : (
                       'Drop image here or click to browse'
                     )}
@@ -158,10 +158,10 @@ const AddFilm = () => {
                 )}
               </Dropzone>
               <textarea 
-                    ref={summaryRef} placeholder='Enter Film summery' className='rounded-md px-4 py-4 w-full my-2'></textarea>
+                    ref={summaryRef} placeholder='Enter Film summery' className='rounded-md px-4 py-4 w-full my-2 text-black'></textarea>
             </div>
 
-            <button className="font-semibold px-4 py-1 shadow-xl bg-orange-400 rounded-lg m-auto hover:bg-lime-700">
+            <button className="font-semibold px-4 py-1 shadow-xl bg-orange-400 rounded-lg m-auto hover:bg-lime-700 mx-5">
               Submit
             </button>
             <button
