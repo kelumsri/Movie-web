@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { Text, Group, Button, createStyles, rem } from '@mantine/core';
 import { Dropzone, MIME_TYPES } from '@mantine/dropzone';
 import { IconCloudUpload, IconX, IconDownload } from '@tabler/icons-react';
+import Image from 'next/image';
 
 const { pdf, png, gif, jpeg, svg, webp, avif } = MIME_TYPES;
 const ACCEPTED_FILE_TYPES = [pdf, png, gif, jpeg, svg, webp, avif];
@@ -95,7 +96,7 @@ export default function DropzoneButton() {
       {selectedImage && (
         <div>
           <h3>Uploaded Image:</h3>
-          <img src={selectedImage} alt="Uploaded" className="w-50 h-50" />
+          <Image src={selectedImage} alt="Uploaded" className="w-50 h-50" />
         </div>
       )}
     </div>

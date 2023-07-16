@@ -57,7 +57,7 @@ const ArticleList = () => {
 
   useEffect(() => {
     fetchMovieData();
-  }, []);
+  }, );
 
   const fetchMovieData = async () => {
     try {

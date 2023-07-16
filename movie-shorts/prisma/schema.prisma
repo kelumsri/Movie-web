@@ -6,9 +6,8 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
-  relationMode = "prisma"
 }
 
 model User {
@@ -24,6 +23,6 @@ model Film {
   director  String
   Castmember  String
   image     String
-  summary   String @db.VarChar(1500)
+  summary   String
   date      DateTime @default(now())
 }
